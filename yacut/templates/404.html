@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+{% block title %}Очевидно вы указали идентификатор, для которого в базе данных нет ссылки.{% endblock %}
+{% block content %}
+<main>
+  <section class="container my-5">
+    <div class="row">
+        <p>Очевидно вы указали идентификатор, для которого в базе данных нет ссылки.</p>
+        <img class="img-fluid mx-auto d-block" src="{{ url_for('static', filename='img/404.gif') }}" alt="" />
+    </div>
+  </section>
+</main>
+{% endblock %}
