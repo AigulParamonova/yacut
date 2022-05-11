@@ -8,7 +8,7 @@ from . import db
 class URL_map(db.Model):
     """Модель связывающая длинную ссылку с короткой."""
     id = db.Column(db.Integer, primary_key=True)
-    original = db.Column(db.String(256), nullable=False)
+    original = db.Column(db.String(), nullable=False)
     short = db.Column(db.String(16), unique=True)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 

@@ -1,6 +1,8 @@
 import random
 import string
-from flask import abort, flash, redirect, render_template, flash
+from http import HTTPStatus
+
+from flask import abort, flash, redirect, render_template
 
 from . import app, db
 from .forms import YacutForm
@@ -35,7 +37,7 @@ def index_view():
         )
         db.session.add(url_map)
         db.session.commit()
-        return render_template('yacut.html', form=form, short=short_name), 200
+        return render_template('yacut.html', form=form, short=short_name), HTTPStatus.OK
     return render_template('yacut.html', form=form)
 
 
