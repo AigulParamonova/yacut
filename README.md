@@ -39,3 +39,16 @@ python3 -m pip install --upgrade pip
 ```
 pip install -r requirements.txt
 ```
+
+Запустить проект:
+
+```
+flask run
+```
+
+### Технологии:
+- Python 3
+- Flask 2.0
+- REST API
+- SQLAlchemy 1.4
+- Git
